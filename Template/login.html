@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+
+
+  <style>
+    form {
+  /* Additional styles for the form (e.g., width, padding, etc.) */
+  max-width: 400px;
+  padding: 20px;
+  background-color: #F0FFF4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  justify-content: space-between;
+  margin: 0 auto;
+
+
+}
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background_color: #ADD8E6;
+  }
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+
+    }
+    input[type="checkbox"] {
+  margin-right: 5px; /* Add some space between the checkbox and label */
+}
+
+    .container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .container button[type="submit"] {
+display: block;
+  margin: 0 auto; /* Align the submit button to the center horizontally */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+    }
+    .txt{
+    align-items:center;
+    }
+    .logo_icons{
+    margin-top:20px;
+    }
+    .logo_img{
+    border-radius: 10%;
+    width:30px;
+    height:30px;
+    padding: 5px;
+    }
+     .left{
+    display: flex;
+    justify-content: left;
+    align-items:center;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+
+
+
+    }
+    .right{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+
+
+
+    }
+    .login-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Adjust the spacing between social login images */
+}
+
+.social-login {
+  display: block;
+  width: 50px; /* Adjust the width of social login icons */
+  height: 50px; /* Adjust the height of social login icons */
+}
+
+.social-login img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Additional styling for social login images */
+#linkedin-login img {
+  border-radius: 10%;
+
+   border: 1px solid #ccc/* Make the LinkedIn logo circular */
+}
+
+#github-login img {
+  border: 1px solid #ccc;
+   border-radius: 10%;
+   /* Add a border around the GitHub logo */
+}
+
+#google-login img {
+  border-radius: 10%;
+   border: 1px solid #ccc/* Apply a grayscale effect to the Google logo */
+}
+    #Pepul-login img {
+  border-radius: 10%;
+   border: 1px solid #ccc/* Apply a grayscale effect to the Google logo */
+}
+  </style>
+</head>
+<body class="body">
+<a href="/"></a>
+  <div class="container">
+    <h2 align="center">Sign in</h2>
+    <form method="POST">
+      <label for="username">Mail_id:</label>
+      <input type="text" id="username" name="Mail_id" placeholder="Username or Mail ID" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="Password" placeholder="************" required>
+<div class="left">
+      <input type="checkbox">Reminder me
+      <a href="#" class="right">Forget Password?</a>
+  </div>
+      <br><br>
+        <button type="submit">Sign In</button>
+
+    </form>
+    <br>
+<p align="center">If you don't have account. Click here</p>
+    <h4 align="center"><a href="Sign up.html">Create new account</a></h4>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    Face Detection process
+    </title>
+    <link rel="stylesheet" type="text/css" href="/Static/model_detection.css">
+
+</head>
+<body>
+ <button id="runButton1" onclick="run_python_code()">Add the Attendance</button>
+ <div id="output1"></div>
+
+    <form id="addPersonForm" action="/Add_new_person" method="POST">
+
+        <input type="text" id="new_person" name="new_person" class="input">
+        <button class="button-secondary">Add New Person</button>
+    </form>
+    <div id="output"></div>
+    <script>
+               document.getElementById('runButton1').addEventListener('click', function () {
+            fetch('/run-python-code')
+                .then(response => response.text())
+                .then(result => {
+                    document.getElementById('output1').textContent = result;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+                document.getElementById('addPersonForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+            const formData = new FormData(this);
+
+            fetch('/Add_new_person', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(result => {
+                document.getElementById('output').textContent = result;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+    </script>
+</body>
+
+</html>

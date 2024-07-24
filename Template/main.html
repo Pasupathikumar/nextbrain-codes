@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Management System</title>
+    <link rel="stylesheet" href="/Static/main.css">
+
+</head>
+<body>
+<a href="/login"></a>
+<nav class="nav-bar">
+ <ul id="Body">
+<li id="logo">Gender and Face detection using Face Recognition</li>
+<li class="nav-links">
+<ul>
+<li><a href="#Home">Home</a></li>
+
+<li> <a href="#bio">Project Details</a></li>
+<li><a href="login.html">Sign In</a></li>
+
+<li> <a href="#contact" class="link-button">Contact</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+
+<br>
+<section id="home" class="bio">
+
+    <div class="container">
+    <div class="left-column">
+      <h4>Introduction</h4>
+        <br>
+      <p>Face identification is the most popular technique to use the attendance marking and person tracking  with the gender, age details.
+          Face recognition task of identifying the faces like already known and unknown or new person faces.
+          And identify the gender, age and emotion result using face recognition process.
+          <br><br>Using Mongodb database to store the attendance data's with details.
+          The face recognition is based on two different process or categories.
+          First one is Feature encoding and comparison process, and Second one is image encoding and comparison process.
+          In this project, I am used the image encoding and comparison process for face detection and identification.
+      </p>
+
+    </div>
+    <div class="right-column">
+      <h4>Key Components and Libraries</h4>
+        <br>
+      <ul>Face recognition</ul><br>
+        <ul>OpenCV</ul><br>
+        <ul>MTCNN</ul><br>
+        <ul>Tensorflow</ul><br>
+        <ul>DeepFace</ul><br>
+        <ul>Pymongo</ul><br>
+    </div>
+  </div>
+    <br>
+
+</section>
+<br>
+<section id="details">
+        <div class="working-principles">
+<u><h4>Project Working Concepts:</h4></u><br>
+    <p>In this project, using face recognition process to detect the face and identify the person name, age, gender, emotion using face recognition process and custom CNN model for gender detection and age detection process. And make attendance of detected persons with date, time, gender, etc details.
+
+Coming to face recognition process, first process is prepare the required datasets, and calculate the number of classes with class names. And then , second process is data preprocessing . Data preprocessing like data encoding process. Data preprocessing for face detection using images is using two steps, one is face locations using required data's (images), and second is face encoding process.  Face encoding  is work like , analyze and store the feature of given face and convert to numerical representation of those faces.
+<br><br>
+Second process is connect the required camera and collect the video frames. After collected the  locate the face and encode the frame using face locations and face encoding methods. and compare the trained encoding values and given frame values. After finding the match, find the match index name or class of this given matched value. Display the given class name using opencv python library tools.
+
+Coming to the gender, and age detection process, collect the separate database for those two models, and preprocess the all data's like image to array conversion, image data generator. After image data generator process, calculate the number of classes, and class names.
+<br><br>
+Create the custom CNN model for detect the gender, age with training image data's. Custom CNN model creation is carry three layers, Convolutional layer, Flatten layer, Fully connected layer.
+        Convolutional layer is the input layer of CNN model, Flatten layer is working like, make  hidden layers are flatten of this model.  Connect the all input, hidden, and output layers are working in Fully connected layer.
+<br><br>
+Detect the gender, age, emotion using given camera frame. Preprocess the given frame and compare the preprocessed frame data and trained data's using model prediction process. Convert the model prediction value into array, and normalization value. Compare the normalization value to given labels. Finally get output of the gender, age, emotion details.
+<br><br>
+After detect the face with gender, date, detection time details, automatically add those details in the given MongoDB collections. Also automatically send the attendance details to required person mail. Once add the details in the given collection,  avoid the duplications data's without hold or stop the detection process.</p><br>
+        </div>
+        <div class="container">
+    <div class="left-column-ad">
+      <h3>Advantages</h3><br>
+      <ul>
+          <li>Detection accuracy is more than 85%.</li><br>
+<li>Easy to train and test the data.</li><br>
+<li>Dataset memory size is low.</li><br>
+<li>Code simplicity</li>
+      </ul>
+    </div>
+    <div class="right-column-dis">
+      <h3>Disadvantages</h3><br>
+      <ul><li>Detection process or video playing is slow using CPU</li></ul>
+    </div>
+  </div>
+
+</section>
+<br>
+<section id="feedback">
+
+<h3 id="contact" align="center">Contact Us</h3>
+  <div class="container">
+    <div class="form-container">
+      <form action="{{url_for('feedback')}}" method="POST">
+
+        <input type="text" id="name" placeholder="Name" name="name" required><br><br>
+
+        <input type="email" id="email" name="email" placeholder="Mail ID" required><br><br>
+
+        <textarea id="message" name="message"  placeholder="Feedback" required></textarea><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div class="map-container">
+      <div class="map">
+        <!-- Embed your map here, e.g., using an iframe -->
+        <iframe width="900px" height="300px" src="https://www.google.com/maps/embed/v1/place?q=Nextbrain,+Whitefield,+Prasanth+Extension,+Bengaluru,+Karnataka,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>

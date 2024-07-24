@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SignUp Page</title>
+  <style>
+
+
+  body {
+   background_color: #D3D3D3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background_color:#90EE90;
+
+    }
+
+    .container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .container button[type="submit"] {
+      display: block;
+  margin: 0 auto; /* Align the submit button to the center horizontally */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+    }
+    form {
+  /* Additional styles for the form (e.g., width, padding, etc.) */
+  max-width: 400px;
+  padding: 20px;
+  background-color: #F0FFF4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  justify-content: space-between;
+  margin: 0 auto;
+
+
+}
+
+
+    .center{
+    display: flex;
+    justify-content: center;
+    align-text: center;
+    }
+    .right{
+    display: flex;
+    justify-content: right;
+    align-text: right;
+    margin-right: auto;
+
+    }
+            .form-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-column {
+            flex: 1;
+            padding: 10px;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 align="center">Sign Up</h2>
+    <form method="POST" action="/submit">
+
+      <label>First Name:</label>
+      <input type="text"  name="First Name" placeholder="First Name" required><br>
+
+      <label>Last Name:</label>
+      <input type="text"  name="Last Name" placeholder="Last Name" required><br>
+
+      <label>UserName:</label>
+      <input type="text"  name="User Name" placeholder="First Name" required><br>
+      <div class="form-container">
+        <div class="form-column">
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+
+        </div>
+        <div class="form-column">
+            <label>Date of Birth:</label>
+            <input type="date" name="dob">
+        </div>
+    </div><br>
+      <label>Email ID:</label>
+      <input type="text"  name="Mail_id" placeholder="Mail ID" required><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+
+     <a href="go to login.html"><button type="submit">Submit</button>
+
+</a>
+</form>
+  </div>
+
+</body>
+</html>
