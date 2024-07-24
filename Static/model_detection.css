@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+button {
+    background-color: #007bff; /* Background color (blue) */
+    color: #fff; /* Text color (white) */
+    padding: 10px 20px; /* Padding inside the button (top/bottom and left/right) */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Cursor style (hand) */
+    font-size: 16px; /* Font size */
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color: #1e7e34;
+}
+
+/* Gray secondary button */
+.button-secondary {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button-secondary:hover {
+    background-color: #999;
+}
